@@ -1,0 +1,82 @@
+
+## 📁 Project Structure
+
+```
+c:\Users\HP\OneDrive\TaskFlow/
+├── public/
+│   ├── index.html              ✅ Main SPA entry point
+│   ├── app.js                  ✅ AngularJS module + controller with 3 intentional bugs
+│   └── style.css               ✅ Minimal functional styling
+├── db.json                     ✅ json-server database with sample tasks
+├── package.json                ✅ Dependencies (json-server)
+├── README.md                   ✅ Complete setup & documentation
+└── TESTING-GUIDE.md            ✅ Detailed bug investigation guide
+```
+
+## 🚀 Quick Start (3 steps)
+
+### **Step 1: Install Dependencies**
+```bash
+cd c:\Users\HP\OneDrive\TaskFlow
+npm install
+```
+
+### **Step 2: Start Backend (json-server)**
+```bash
+npm run start-server
+```
+Leave this terminal running. You should see:
+```
+Resources
+http://localhost:3000/tasks
+```
+
+### **Step 3: Open the App**
+Open index.html in your browser, or:
+```bash
+start public\index.html
+```
+
+## 🐛 The 3 Intentional Bugs
+
+| Bug | Location | Observation | Difficulty |
+|-----|----------|-------------|-----------|
+| **#1: Duplicate API Calls** | app.js, lines 75-89 | Open DevTools Network tab on page load - see 2 GET requests | ⭐ Easy |
+| **#2: Duplicate Entries on Add** | app.js, addTask() | Add a task - appears twice until refresh | ⭐⭐ Medium |
+| **#3: UI State Mismatch** | app.js, toggleTaskCompletion() | Use DevTools throttling, toggle task, UI updates before server | ⭐⭐⭐ Hard |
+
+## 📖 Complete Documentation Included
+
+- **README.md**: Setup, API endpoints, AngularJS concepts, migration paths
+- **TESTING-GUIDE.md**: Step-by-step instructions to discover and understand each bug
+
+## ⚙️ Features Implemented
+
+✅ Full CRUD operations (Create, Read, Update, Delete)  
+✅ Task completion toggle  
+✅ Real-time UI updates via $scope data binding  
+✅ REST API integration via $http service  
+✅ Error handling with user feedback  
+✅ Debug info section showing task counts  
+✅ Manual refresh button  
+✅ Keyboard Enter support for adding tasks  
+✅ Minimal but clean UI styling  
+✅ Mobile responsive design  
+
+## 💾 Sample Data
+
+The `db.json` includes 5 starter tasks:
+- Learn AngularJS 1.x fundamentals
+- Understand $scope and dependency injection  
+- Implement CRUD operations with $http (completed)
+- Identify and understand intentional bugs
+- Plan migration to modern Angular or React
+
+## 📝 Code Quality
+
+- ✅ Extensive comments explaining AngularJS concepts
+- ✅ Detailed bug documentation with root cause analysis
+- ✅ Clean vs buggy implementations shown for comparison
+- ✅ Real-world legacy patterns demonstrated
+- ✅ No TypeScript - pure AngularJS 1.x
+

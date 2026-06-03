@@ -1,0 +1,73 @@
+/plan
+Act as a senior frontend developer experienced in AngularJS (Angular 1.x).
+Objective:
+Create a complete "TaskFlow" application a minimal task-tracking single-page application (SPA) using AngularJS 1.x architecture.
+Context:
+The app must strictly use AngularJS 1.x (NOT Angular 2+ or React).
+Follow legacy patterns such as:
+$scope-based controllers
+$http for REST API calls
+ng-app and ng-controller (flat architecture)
+Basic HTML directives (ng-repeat, ng-model, ng-click, etc.)
+No TypeScript
+No modern frameworks or libraries
+Keep it realistic with some minor bugs or inefficient patterns (to simulate legacy code for migration practice)
+Backend:
+Use json-server as the backend
+REST endpoints from a db.json file
+Example resource: /tasks
+Tasks to Implement:
+
+Application Setup:
+Create index.html with ng-app
+Include AngularJs via CON
+Define a single module (e.g., taskApp)
+Controller:
+Create a TaskController using $scope
+Manage all application logic inside controller
+Features (CRUD):
+Fetch all tasks (GET)
+Add new task (POST)
+Update task (PUT/PATCH)
+Delete task (DELETE)
+Toggle task completion
+UI Requirements:
+Input field for adding tasks
+Display list using ng-repeat
+Buttons for edit, delete, complete
+Basic styling using CSS
+API Integration:
+Use $http service to call json-server endpoints
+Handle success and error responses
+Data Model (db.json format):
+Each task should have:
+id
+title
+completed (boolean)
+Intentional Legacy Characteristics:
+Use a single controller (no services separation)
+Minimal modularization
+Direct $scope manipulation
+Some non-optimized patterns (e.g., repeated API calls, lack of reuse)
+Bug Simulation (Important):
+Add at least 2-3 realistic bugs such as:
+Task not updating properly
+Duplicate entries on refresh
+Incorrect toggle behavior
+Folder Structure:
+Index.html
+App.js (contains module and controller)
+Style.css
+Db.json (for json-server)
+Instructions:
+Provide steps to run json-server
+Provide steps to run the AngularJS app
+Output Format:
+Full code for each file
+Clear comments explaining AngularJS concepts
+Highlight where bugs are intentionally introduced
+Keep code simple, readable, and suitable for migration exercises
+Constraints:
+Do NOT use Angular (v2+) or React
+Do NOT introduce TypeScript
+Keep everything beginner-friendly but realistic for legacy systems
